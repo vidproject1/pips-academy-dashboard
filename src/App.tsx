@@ -13,6 +13,7 @@ import StrategyBreakdown from "./pages/StrategyBreakdown";
 import Notes from "./pages/Notes";
 import CheatSheets from "./pages/CheatSheets";
 import NotFound from "./pages/NotFound";
+import Admin from "./pages/Admin";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
               <Route path="/strategy" element={<StrategyBreakdown />} />
               <Route path="/notes" element={<Notes />} />
               <Route path="/cheatsheets" element={<CheatSheets />} />
+              <Route path="/admin" element={<Admin />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

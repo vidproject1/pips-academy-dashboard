@@ -7,7 +7,8 @@ import {
   Video, 
   BarChart, 
   Menu, 
-  X 
+  X, 
+  Settings 
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useProgress } from '@/contexts/ProgressContext';
@@ -45,6 +46,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
     { path: '/strategy', label: 'Strategy Breakdown', icon: <FileText className="h-5 w-5" /> },
     { path: '/notes', label: 'Notes', icon: <BookOpen className="h-5 w-5" /> },
     { path: '/cheatsheets', label: 'Cheat Sheets', icon: <Tag className="h-5 w-5" /> },
+    { path: '/admin', label: 'Admin', icon: <Settings className="h-5 w-5" /> },
   ];
 
   return (
@@ -67,7 +69,11 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       >
         <div className="p-4 flex flex-col h-full">
           <div className="flex justify-between items-center mb-6 mt-4 px-2">
-            <h1 className="text-xl font-bold text-primary">Only Pips Academy</h1>
+            {/* Brand logo replaces text */}
+            <Link to="/" className="flex items-center" aria-label="ADHD Traders Home">
+              <img src="/logo adhd traders.png" alt="ADHD Traders logo" className="h-10 w-auto" />
+              <span className="sr-only">ADHD Traders</span>
+            </Link>
             <div className="hidden md:block">
               <DarkModeToggle />
             </div>
