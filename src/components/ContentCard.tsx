@@ -38,8 +38,8 @@ const ContentCard = ({
   return (
     <div
       className={cn(
-        "border border-border rounded-xl p-5 shadow-sm transition-all duration-200",
-        completed ? "card-watched" : "hover:shadow-md bg-card",
+        "glassmorphic-card rounded-xl p-5 transition-all duration-200 hover:shadow-2xl",
+        completed ? "card-watched" : "",
         className
       )}
     >

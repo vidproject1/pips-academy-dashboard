@@ -48,7 +48,8 @@ const MainLayout = ({ children }: MainLayoutProps) => {
   ];
 
   return (
-    <div className="flex h-screen flex-col md:flex-row bg-background">
+    <div className="relative overflow-hidden flex h-screen flex-col md:flex-row bg-background">
+      <div className="orbs-bg" />
       {/* Mobile sidebar toggle */}
       <button
         className="md:hidden fixed top-4 left-4 z-50 bg-primary/70 backdrop-blur-sm text-primary-foreground p-2 rounded-md shadow-md"
